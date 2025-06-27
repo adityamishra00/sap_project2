@@ -1,0 +1,82 @@
+<mvc:View controllerName="com.asint.interns.project2.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page" title="{i18n>title}">
+
+        <SearchField 
+            placeholder="Search Suppliers..." 
+            liveChange="onSearch"
+            width="100%" />
+
+        <Table id="supplierTable" 
+               items="{/Suppliers}" 
+               mode="SingleSelectMaster">
+
+            <columns>
+                <Column>
+                    <Text text="Company Name" />
+                </Column>
+                <Column>
+                    <Text text="Contact Name" />
+                </Column>
+                <Column>
+                    <Text text="Contact Title" />
+                </Column>
+            </columns>
+
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        
+                        <Link text="{CompanyName}" press="onCompanyNamePress" />
+                        <Text text="{ContactName}" />
+                        <Text text="{ContactTitle}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+    </Page>
+</mvc:View>
+
+
+
+
+<!-- <mvc:View controllerName="com.asint.interns.project2.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="page" title="{i18n>title}">
+
+        <SearchField 
+            placeholder="Search Territories..." 
+            liveChange="onTerritorySearch"
+            width="100%" />
+
+        <Table id="territoryTable" items="{/TerritorySet}">
+            <columns>
+                <Column>
+                    <Text text="Territory ID" />
+                </Column>
+                <Column>
+                    <Text text="Description" />
+                </Column>
+                <Column>
+                    <Text text="Region ID" />
+                </Column>
+            </columns>
+
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{TerritoryID}" />
+                        <Text text="{TerritoryDescription}" />
+                        <Text text="{RegionID}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+    </Page>
+</mvc:View> -->

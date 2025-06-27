@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.asint.interns.project2.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="detailPage" title="Supplier Detail">
+        <content>
+            <Text id="companyNameText" text="Company Name will appear here" />
+        </content>
+    </Page>
+</mvc:View>
+
